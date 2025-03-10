@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  nginx:
+    build: .
+    container_name: nginx-web
+    restart: always
+    ports:
+      - "8088:8088"
+    volumes:
+      - ./website:/usr/share/nginx/html
